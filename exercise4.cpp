@@ -1,27 +1,49 @@
 #include <iostream>
+#include <cmath>
+#include <math.h>
 using namespace std;
 
+
+
 int main() {
-	bool run = true;
-	int times;
-	int b = 0;
+	float num;
 
-	int c = 0;
+	cout << "Enter a number:";
+	cin >> num;
 
-	while (c < 16) {
-		cout << c << " ";
-		++c;
+	char choice;
+	cout << "What do you want to do?" << endl;
+	cout << "s = square root, l = logarithm, e = exponent function, t = tan, x = exit function" << endl;
+	cin >> choice;
+
+	switch (choice) {
+	case 's':
+		num = sqrt(num);
+		cout << num;
+		break;
+	case 'l':
+		num = log(num);
+		cout << num;
+		break;
+	case 'e':
+		float exp;
+		cout << "What exponent would you like to use?";
+		cin >> exp;
+		num = pow(num, exp);
+		cout << num;
+		break;
+	case 't':
+		num = tan(num);
+		cout << num;
+		break;
+	case 'x':
+		exit;
+		break;
+	default:
+		cout << "That is not a valid option." << endl;
+		break;
+
 	}
-	cout << endl;
 
-	while (run) {
-		cout << "How many times do you want to print 'Hello World'?";
-		cin >> times;
-		b = 0;
-
-		while (b < times) {
-			cout << "Hello World" << endl;
-			++b;
-		}
-	}
 }
+

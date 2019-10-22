@@ -1,28 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-	float amount;
-	float interest;
-	float time;
+int main() {
+	int time;
 
-	cout << "What is the amount of the loan? ";
-	cin >> amount;
-
-	cout << "What is the interest rate of the loan? ";
-	cin >> interest;
-
-	cout << "What is the time of the loan? ";
+	cout << "How many seconds do you want printed?";
 	cin >> time;
 
-	float realint = interest / 100;
-	float total = amount * realint * time;
-
-	cout << "The amount of interest during loan time: " << total << " euros.";
-
-
-
+	int i = 0;
+	for( i = 0; i < time; i++)
+	{
+		float speed = 35.316 * i;
+		cout << i << "   " << speed << endl;
+	}
 
 
 

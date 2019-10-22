@@ -1,26 +1,18 @@
 #include <iostream>
 using namespace std;
 
-
 int main() {
-	int x = 0;
-	int y = 5;
-	while (x < 11)
+	int i = 1;
+	for (i = 1; i < 11; i++)
 	{
-		cout << y << " ";
-		y = y-1;
-		x = x + 1;
+		cout << i << " ";
 	}
-	cout << endl << endl;
 
+	cout << endl;
 
-	int a = 0;
-	int b = 2;
-	while (a < 25)
+	int x = 2;
+	for (x = 2; x < 21; x += 2)
 	{
-		cout << b << " ";
-		b = b + 2;
-		a++;
-		
+		cout << x << ", ";
 	}
 }
