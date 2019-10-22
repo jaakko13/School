@@ -1,32 +1,26 @@
 #include <iostream>
 using namespace std;
 
+
 int main() {
-
-	float height;
-	float weight;
-
-	cout << "What is your height in meters?";
-	cin >> height;
-
-	cout << "What is your weight in kilograms?";
-	cin >> weight;
-
-	float index = weight / (height * height);
-
-	if (index <= 20.7) {
-		cout << "You are underweight.";
+	int x = 0;
+	int y = 5;
+	while (x < 11)
+	{
+		cout << y << " ";
+		y = y-1;
+		x = x + 1;
 	}
-	else if (index > 20.7 && index <= 26.4) {
-		cout << "You are normal weight.";
-	}
-	else if (index > 26.4 && index <= 27.8) {
-		cout << "You ate slightly overweight.";
-	}
-	else if (index > 27.8 && index <= 31.1) {
-		cout << "You are overweight.";
-	}
-	else if (index > 31.1) {
-		cout << "You are obese.";
+	cout << endl << endl;
+
+
+	int a = 0;
+	int b = 2;
+	while (a < 25)
+	{
+		cout << b << " ";
+		b = b + 2;
+		a++;
+		
 	}
 }

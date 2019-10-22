@@ -1,57 +1,32 @@
 #include <iostream>
 using namespace std;
 
-void celsius();
-void fah();
-
-
 int main() {
-	char choice;
-	bool running = true;
+	float jump;
+	float first;
+	float second;
+	float third;
+	float fourth;
+	float fifth;
 
-	while (running) {
-		cout << "Set unit (c=celsius, f=fahrenheit, e=exit)" << endl;
-		cin >> choice;
-		{
-			switch (choice)
-			{
-			case 'c':
-				celsius();
-				break;
-			case 'f':
-				fah();
-				break;
-			case 'e':
-				return 0;
-				break;
-			default:
-				break;
-			}
-		}
-	}
-}
+	cout << "What was the length of the jump?";
+	cin >> jump;
 
-void celsius() {
-	float temp;
+	cout << "What score did judge 1 give?";
+	cin >> first;
+	cout << "What score did judge 2 give?";
+	cin >> second;
+	cout << "What score did judge 3 give?";
+	cin >> third;
+	cout << "What score did judge 4 give?";
+	cin >> fourth;
+	cout << "What score did judge 5 give?";
+	cin >> fifth;
 
-	cout << "What is your temperature in fahrenheit?";
-	cin >> temp;
+	float judges = first + second + third + fourth + fifth;
+	float total = judges + jump * 0.9;
 
-	float newtemp = (temp - 32) * 0.55;
-
-	cout << "Your temperaure in clesius is " << newtemp << " degrees." << endl;
-
-}
-
-void fah() {
-	float temp;
-
-	cout << "What is your temperature in celsius?";
-	cin >> temp;
-
-	float newtemp = (temp * 1.8) + 32;
-
-	cout << "Your temperaure in fahrenheit is " << newtemp << " degrees." << endl;
+	cout << "The total score is " << total;
 
 
 }
